@@ -206,7 +206,7 @@ section.dark-mode .nav-links li a:hover .link-name {
 .menu-items .mode-toggle {
   position: absolute;
   right: 14px;
-  left: 6px;
+  left: 26px;
   height: 60px;
   min-width: 65px;
   display: flex;

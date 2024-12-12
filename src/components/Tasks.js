@@ -116,7 +116,9 @@ const Tasks = ({ handleSidebarToggle }) => {
                         <div className='project-title'>
                             <h3>Customer Pulse</h3>
                             <div className="mode-toggle">
-                                <img src={userAvatar} className='img-fluid' />
+                                <img src={userAvatar} className='img-fluid'
+                                  style={{ marginLeft: '15px', width: '50px', height: 'auto' }}
+                                   />
                             </div>
                             <ul
   className="menu"
@@ -256,13 +258,7 @@ const Tasks = ({ handleSidebarToggle }) => {
 
                         <div className='task-layouts container pt-3'>
                             <div className='row'>
-                                <div 
-                                    className='col-lg-3 col-md-12 col-sm-12 dnd drop-zone' 
-                                    onDragOver={(e) => handleDragOver(e)} 
-                                    onDrop={(e) => handleDrop(e, 'backlog')}
-                                >
-                                    
-                                </div>
+                                
                                 <div className='col-lg-3 col-md-12 col-sm-12 dndgit add'>
                               <p className='layout-title b-default'>RECENT ISSUES <span>({yetStartTasks.length})</span></p>
 
@@ -293,70 +289,7 @@ const Tasks = ({ handleSidebarToggle }) => {
                                     ) : (
                                         <p>No tasks available.</p>
                                     )}
-                                </div>
-
-                                <div className='col-lg-3 col-md-12 col-sm-12 dnd'>
-                                 
-
-                                    {Array.isArray(progressTasks) && progressTasks.length > 0 ? (
-                                        filterTasks(progressTasks).map((task) => (
-                                            <div
-                                                className={`task-board ${draggedItem === task ? 'dragged-item' : ''}`}
-                                                key={task.primaryId}
-                                                draggable
-                                                onDragStart={(e) => handleDragStart(e, task)}
-                                                onDragOver={(e) => handleDragOver(e)}
-                                                onDrop={(e) => handleDrop(e, 'in progress')}
-                                            >
-                                                <p className='tasktitle'>{task.name}</p>
-                                                <a href='#' className='task-tag'>
-                                                    <UilUser /> {task.assignee}
-                                                </a>
-                                                <a href='#' className={`task-tag priority ${(task.priority)}`}>
-                                                    <UilStatus /> {task.priority}
-                                                </a>
-                                                <p className='pt-2'>
-                                                  
-                                                    <span className='datetime'>{task.startDate}</span>
-                                                    <span className='datetime'>Effect <strong>{task.effortSpent}</strong></span>
-                                                </p>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <p>No tasks available.</p>
-                                    )}
-
-                                </div>
-                                <div className='col-lg-3 col-md-12 col-sm-12 dnd'>
-
-                                    {Array.isArray(doneTasks) && doneTasks.length > 0 ? (
-                                        filterTasks(doneTasks).map((task) => (
-                                            <div
-                                                className={`task-board ${draggedItem === task ? 'dragged-item' : ''}`}
-                                                key={task.primaryId}
-                                                draggable
-                                                onDragStart={(e) => handleDragStart(e, task)}
-                                                onDragOver={(e) => handleDragOver(e)}
-                                                onDrop={(e) => handleDrop(e, 'done')}
-                                            >
-                                                <p className='tasktitle'>{task.name}</p>
-                                                <a href='#' className='task-tag'>
-                                                    <UilUser /> {task.assignee}
-                                                </a>
-                                                <a href='#' className={`task-tag priority ${(task.priority)}`}>
-                                                    <UilStatus /> {task.priority}
-                                                </a>
-                                                <p className='pt-2'>
-                                                   
-                                                    <span className='datetime'>{task.startDate}</span>
-                                                    <span className='datetime'>Effect <strong>{task.effortSpent}</strong></span>
-                                                </p>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <p>No tasks available.</p>
-                                    )}
-
+                            
                                 </div>
                             </div>
                         </div>

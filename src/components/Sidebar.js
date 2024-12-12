@@ -19,10 +19,7 @@ const Sidebar = ({ sidebarClosed }) => {
         <>
             <nav className={`${sidebarClosed ? '' : 'close'}`}>
                 <div className="logo-name">
-                    <div className="logo-image">
-                        {/* <img src="images/logo.png" alt="" /> */}
-                    </div>
-                    <span className="logo_name">Admin</span>
+                    
                 </div>
                 
             </nav>

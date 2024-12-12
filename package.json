@@ -1,0 +1,54 @@
+{
+  "name": "task-board",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000",
+  "dependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.2",
+    "http-proxy-middleware": "^2.0.6",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-datepicker": "^4.24.0",
+    "react-dom": "^18.2.0",
+    "react-google-charts": "^4.0.1",
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "5.0.1",
+    "task-management": "^0.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "Task Management is designed to streamline task management within agile teams. It offers a visual Task Board layout, robust drag-and-drop functionality, and comprehensive task cards that enhance collaboration and productivity.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0-alpha.6"
+  }
+}
